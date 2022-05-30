@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 public class main {
 	static int temp_quick= 1, temp_menu = 25, temp_dialogo = 60, reputacao = 0;
 	
+	// ********************** IGOR ***************************************************************
 	public static void main(String[] args) throws Exception {
 		int ret_intro = 0;
 		boolean gameover = false;
@@ -23,7 +24,9 @@ public class main {
 				
 				capitulo2();
 				
-				//capitulo 3
+				capitulo2_1();
+
+				capitulo3();
 				
 				//capitulo 4
 				gameover = capitulo4();
@@ -42,7 +45,7 @@ public class main {
 		}
 		
 	}
-	// ********************** IGOR ***************************************************************
+	
 	public static void MENS(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
         System.out.print(caractere);
@@ -112,7 +115,7 @@ public class main {
 		return ret;
 	}
 	
-// ************************ GISELA ***********************************************************	
+// ************************ GISELLA ***********************************************************	
 	public static void epilogo() throws InterruptedException {
 		MENS("Sua vida andava difícil e o que você recebia ajudando a sua avó na padaria da família, mal servia para sustentar você,",TimeUnit.MILLISECONDS,temp_quick);
 		MENS("ela, os 3 cachorros, 2 gatos e 6 periquitos barulhentos\rque moravam no pequeno kitnet da rua 3. ",TimeUnit.MILLISECONDS,temp_quick);
@@ -410,7 +413,227 @@ public class main {
 		System.out.println(
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	}
-	
+
+//******************************** BRUNO *****************************************************	
+	public static void capitulo2_1() throws InterruptedException {
+		Scanner input = new Scanner(System.in);
+		int cont = 0;
+		String alternativa;
+		String alternativa2;
+		
+		do {
+			MENS("Considerando que as raízes de uma função do segundo grau são x e y,"
+					+ "selecione a alternativa correta:\n", TimeUnit.MILLISECONDS, temp_quick);
+			MENS("[A] A coordenada y do vértice pode ser obtida somando as raízes.\n"
+					+ "[B] A coordenada y do vértice é dada por f ([x + y] /2).\n"
+					+ "[C] A coordenada x do vértice é a imagem da média aritmética entre as raízes na função.\n"
+					+ "[E] A coordenada x do vértice é dada pela fórmula: (–Δ,4 )\n" + "[E] NDA.  ",
+					TimeUnit.MILLISECONDS, temp_quick);
+			alternativa = input.next();
+
+			switch (alternativa) {
+
+			case "a", "A", "c", "C", "d", "D", "e", "E":
+
+				MENS("[NARRADOR] “Resposta errada, adivinha quem sacou a arma primeiro?", TimeUnit.MILLISECONDS,
+						temp_quick);
+
+				cont++;
+				if (cont < 3) {
+					MENS("TENTE NOVAMENTE", TimeUnit.MILLISECONDS, temp_quick);
+				} else {
+					// FIM DE JOGO  
+					MENS("GAME OVER!", TimeUnit.MILLISECONDS, temp_quick);
+
+				}
+				break;
+			
+			}
+		} while (!alternativa.equalsIgnoreCase("b") && !alternativa.equalsIgnoreCase("B") && cont < 3);
+
+		switch (alternativa) {
+
+		case "b", "B":
+			MENS("[NARRADOR] “Você posiciona-se a frente do delator, saca a arma que\n"
+					+ "lhe foi dada junto com a missão, executa o objetivo principal da sua visita e \n"
+					+ "faz com que o infeliz delator se encontre com o único mal irremediável... a morte!\n",
+					TimeUnit.MILLISECONDS, temp_quick);
+
+			MENS("\r[NARRADOR] “Problema resolvido e a sua forma de solucionar a situação chamou a atenção\n"
+					+ "dos mafiosos da região, os mesmos te convidaram para se tornar o Caporegime da família.\n",
+					TimeUnit.MILLISECONDS, temp_quick);
+			MENS("\rSua resposta é [Sim] ou [Não]", TimeUnit.MILLISECONDS, temp_quick);
+		}
+		alternativa2 = input.next();
+
+		switch (alternativa2) {
+
+		case "SIM", "sim", "Sim":
+			MENS("[NARRADOR] Parabéns, você agora é o Caporegime da família Bianchi!\n"
+					+ " Sua principal missão agora será cuidar da segurança da família do Don Bianchi.\r\n"
+					+ "\r[Segue para próxima fase]\n", TimeUnit.MILLISECONDS, temp_quick);
+			break;
+
+		case "NÃO", "não", "Não":
+			// FIM DE JOGO 
+			MENS(" [MAFIOSOS] Você não é páreo para esse tipo de serviço, volte para casa para assar biscoitos\n"
+					+ " com a sua avó Clotilde e nunca mais se meta nessas bandas!\n" + "\r [GAME OVER]\n",
+					TimeUnit.MILLISECONDS, temp_quick);
+			break;
+			}
+	}
+//******************************** KÁTIA *****************************************************	
+	public static void capitulo3() throws Exception {
+		Scanner entrada = new Scanner(System.in);
+		String resposta;
+		//texto = 1;
+		MENS("NARRADOR:\r"
+				+"�Ap�s alguns anos como Caporegime da fam�lia Fibonacci,\n"
+				+ "o clima entre os mafiosos da regi�o acaba esquentando, entre uma intriga e outra\n"
+				+ "surge uma inimizade muito grande entre as fam�lias.\n"
+				+ "Sua miss�o agora � ajudar o Don Nero a identificar a melhor forma de lidar com essa guerra iminente...\n"
+				+ "Para tentar negociar com as fam�lias voc� precisa ir at� o ponto de encontro para uma\n"
+				+ "conversa com o chefe da m�fia vizinha, encontre no plano cartesiano o �nico quadrante\n"
+				+ "em que n�o tem nenhum ponto marcado, os pontos j� marcados foram: A (2, 3), B (-1, 2), C (2, -3) e D (1, 0).�\n)",TimeUnit.MILLISECONDS,temp_quick);
+		
+		List<String> alternativas = new ArrayList<String>(); // Ao iniciar uma rodada as quest�es ser�o apresentadas em
+																// uma nova ordem
+		alternativas.add("[A - I]");
+		alternativas.add("[B - II]");
+		alternativas.add("[C - III]");
+		alternativas.add("[D - IV]");
+
+		Collections.shuffle(alternativas);
+		System.out.println(alternativas);
+		resposta = entrada.next();
+		
+		switch (resposta) {
+		case "A":
+		case "a":
+		case "B": // resposta incorretas
+		case "b":
+		case "D":
+		case "d":
+			//texto = 2;// chamada do segundo texto da fun��o "textos"
+			MENS("NARRADOR:\r\n"
+					+ "�Voc� esta atrasado(a) para o encontro e a m�fia vizinha entende isso como uma afronta e inicou uma guerra... VOC� FALHOU!!�\n" + 
+					"GAMER OVER",TimeUnit.MILLISECONDS,temp_quick);
+			
+			break;
+		case "C": // resposta correta
+		case "c":
+
+			//texto = 3; // chamada do terceiro texto da fun��o "textos"
+			MENS("RESPOSTA CORRETA !\n",TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+			
+			
+			MENS("NARRADOR:\r\n"
+					+ "�MUITO BOM! Voc� chegou at� o ponto de encontro e discute o assunto com a m�fia vizinha.�\r\n\n"
+					+ "",TimeUnit.MILLISECONDS,temp_quick);
+			MENS("MAFIOSO VIZINHO: \r\n" + 
+					"�Seus neg�cios tem crescido bastante e isso est� nos afetando, como\n"
+							+ "oferta de negocia��o para evitar problemas maiores pra voc�s, pe�o que nos\n"
+							+ "d� quatorze cassinos estrat�gicos. O que me diz?\r\n\n" , TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+		
+			MENS("PERSONAGEM:\r\n" // usar varivel que guarda o nome da pesosnagem.
+					+ "�Quatorze cassinos??!!!!! Isso seria o fim dos neg�cios do senhor Don, como eu estou neste momento representando-o,\n"
+					+ "o que posso oferecer s�o cinco cassinos, caso n�o seja do seu agrado, pode iniciar a guerra que tanto\n"
+					+ "deseja e veremos quem realmente sai perdendo!�\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+		
+			MENS("MAFIOSO VIZINHO:\r\n"
+					+ "�Eu aceito no m�nimo dez, voc� acha que eu sou amador garoto? � isso ou nada feito.�\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+			
+			MENS("NARRADOR: \r\n"
+					+ "�O sniper que voc� contratou por precau��o est� a postos aguardando o sinal...\n"
+					+ "Para dar o sinal selecione as outras duas coordenadas que representam a localiza��o do sniper,\n"
+					+ "sendo que uma das diagonais do quadrado tem extremidades A (1; 1) e C (3; 3).\n"
+					+ "As coordenadas dos outros dois v�rtices s�o:�\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+
+			List<String> alternativa = new ArrayList<String>(); // Ao iniciar uma rodada as quest�es ser�o apresentadas
+																// em uma nova ordem
+			alternativa.add("[A - (2; 3) e (3; 2)]");
+			alternativa.add("[B - (3; 1) e (1; 3)]");
+			alternativa.add("[C - (3; 0) e (1; 4)]");
+			alternativa.add("[D - (5; 2) e (4; 1)]");
+			System.out.println(alternativa);
+			resposta = entrada.next();
+			
+			switch (resposta) {
+			case "A":
+			case "a":
+			case "C": // respostas incorretas
+			case "c":
+			case "D":
+			case "d":
+				//texto = 4; // chamada do quarto texto da fun��o "textos"
+				Aguardar();
+				limpatela();
+				
+				MENS("RESPOSTA ERRADA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("NARRADOR:\r\n"
+					+ "�Os seus inimigos perceberam seus olhares para o sniper no teto de uma casa abandonada e atira em seu peito... VOC� FALHOU!!\n" +
+					"GAMER OVER\"\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				
+				break;
+
+			case "B": // resposta correta
+			case "b":
+				//texto = 5; // chamada do quinto texto da fun��o "textos"
+				Aguardar();
+				limpatela();
+				
+				MENS("RESPOSTA CORRETA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("NARRADOR:"
+						+ "�\nMUITO BOM!!!!\n"
+					+ "O mafioso vizinho recebeu um tiro do habilidoso sniper que voc� contratou e morreu...\n"
+					+ "Alguns dias ap�s sua fuga do local a m�fia come�a a perder influ�ncia...\n"
+					+ "Voc� est� cada vez mais perto do seu objetivo, vamos para pr�xima miss�o...�\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("NARRADOR:\r\n\n"
+					+ "�Voltando para a casa dos Fibonacci, o senhor Don anseia falar com voc�...�\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("DON:\r\n\n" + "�Voc� est� se saindo cada vez melhor (nome do personagem), � desse tipo de Caporegime" 
+							+ "que eu preciso ter ao meu lado!�\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("PERSONAGEM:\r\n\n"
+					+ "�Falando nisso senhor, quando eu poderei assumir um cargo como o seu?�\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("DON:\r\n\n"
+					+ "�N�o seja t�o ambicioso, voc� j� deve saber que o m�ximo que pode subir � at� onde est�, mais que isso"
+					+ "eu teria que morrer!�\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("PERSONAGEM:\r\n\n" 
+					+ "�Sim senhor, me desculpe, que bobagem a minha n�o? Posso lhe servir um copo um whiskey?�\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("NARRADOR: \r\n\n"
+					+ "�Voc� prepara um copo de whiskey com gelo para o Don, como de costume, s� que antes de servi-lo coloca o veneno\n"
+					+ "que havia comprado... O chefe est� desconfiado depois dessa conversa que voc� teve com ele, resolva o seguinte\n"
+					+ "problema para persuadi-lo a tomar o whiskey...�\r\n" , TimeUnit.MILLISECONDS,temp_quick);
+			}
+		}
+		entrada.close();
+	}
+	public static void Aguardar() throws Exception { //esse metodo ir� solicitar ao usuario, para teclar "enter" para continuar.
+		//serve para os textos n�o serem mostrados um atras do outro.
+		Scanner s = new Scanner(System.in);
+		
+		for (int i = 0; i < 1; i++) {
+		System.out.print("Precione ENTER para continuar: ");
+		
+		s.nextLine();
+		}
+	}	
 //******************************** IGOR *****************************************************
 	
 	public static boolean capitulo4() throws InterruptedException {
