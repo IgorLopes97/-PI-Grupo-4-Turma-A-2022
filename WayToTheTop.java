@@ -4,10 +4,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class WayToTheTop {
-	public static void Aguarda() { //esse metodo ir· solicitar ao usuario, para teclar "enter" para continuar.
-								//serve para os textos n„o serem mostrados um atras do outro.
+	static int temp_quick= 10, temp_menu = 25, temp_dialogo = 60;
+	
+	public static void Aguardar () throws Exception { //esse metodo ir√° solicitar ao usuario, para teclar "enter" para continuar.
+								//serve para os textos n√£o serem mostrados um atras do outro.
 		Scanner s = new Scanner(System.in);
 
 		for (int i = 0; i < 1; i++) {
@@ -17,118 +20,36 @@ public class WayToTheTop {
 		}
 	}
 
-	public static void limpatela() {
+	public static void limpatela() throws Exception {
 		System.out.println( // metodo usado para simular um clean no console.
 				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 	}
+	public static void MENS (String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
+        for (char caractere : mensagem.toCharArray()) {
+        System.out.print(caractere);
+        unit.sleep(tempo_mensagem);
+        }
+     }
 
 	static int texto = 0;
 
-	static void textos() {
+	
 
-		if (texto == 1) {
-			// texto 1
-			System.out.println("NARRADOR::" + "ìApÛs alguns anos como Caporegime da famÌlia Fibonacci,\n"
-					+ "o clima entre os mafiosos da regi„o acaba esquentando, entre uma intriga e outra\n"
-					+ "surge uma inimizade muito grande entre as famÌlias.\n"
-					+ "Sua miss„o agora È ajudar o Don Nero a identificar a melhor forma de lidar com essa guerra iminente...\n"
-					+ "Para tentar negociar com as famÌlias vocÍ precisa ir atÈ o ponto de encontro para uma\n"
-					+ "conversa com o chefe da m·fia vizinha, encontre no plano cartesiano o ˙nico quadrante\n"
-					+ "em que n„o tem nenhum ponto marcado, os pontos j· marcados foram: A (2, 3), B (-1, 2), C (2, -3) e D (1, 0).ì\n");
-
-		} else if (texto == 3) { // texto3
-			System.out.println("RESPOSTA CORRETA !\n");
-
-			System.out.println("NARRADOR:\n"
-					+ "ìMUITO BOM! VocÍ chegou atÈ o ponto de encontro e discute o assunto com a m·fia vizinha.î\r\n"
-					+ "");
-
-			Aguarda();
-			System.out.println("\r");
-			limpatela();
-			System.out.println(
-					"MAFIOSO VIZINHO: \r\n" + "ìSeus negÛcios tem crescido bastante e isso est· nos afetando, como\n"
-							+ "oferta de negociaÁ„o para evitar problemas maiores pra vocÍs, peÁo que nos\n"
-							+ "dÍ quatorze cassinos estratÈgicos. O que me diz?\r\n" + "");
-
-			System.out.println("PERSONAGEM:\r\n" // usar varivel que guarda o nome da pesosnagem.
-					+ "ìQuatorze cassinos??!!!!! Isso seria o fim dos negÛcios do senhor Don, como eu estou neste momento representando-o,\n"
-					+ "o que posso oferecer s„o cinco cassinos, caso n„o seja do seu agrado, pode iniciar a guerra que tanto\n"
-					+ "deseja e veremos quem realmente sai perdendo!î\r\n" + "");
-
-			System.out.println("MAFIOSO VIZINHO:\r\n"
-					+ "ìEu aceito no mÌnimo dez, vocÍ acha que eu sou amador garoto? … isso ou nada feito.î\r\n ");
-			Aguarda();
-			System.out.println("\r");
-			limpatela();
-
-			System.out.println("NARRADOR: \r\n"
-					+ "ìO sniper que vocÍ contratou por precauÁ„o est· a postos aguardando o sinal...\n"
-					+ "Para dar o sinal selecione as outras duas coordenadas que representam a localizaÁ„o do sniper,\n"
-					+ "sendo que uma das diagonais do quadrado tem extremidades A (1; 1) e C (3; 3).\n"
-					+ "As coordenadas dos outros dois vÈrtices s„o:ì\r\n" + "");
-
-		} else if (texto == 2) { // texto2
-			System.out.println("RESPOSTA ERRADA !\n");
-
-			System.out.println("NARRADOR:\r\n"
-					+ "ìVocÍ esta atrasado(a) para o encontro e a m·fia vizinha entende isso como uma afronta e inicou uma guerra... VOC  FALHOU!!ì\n" + 
-					"GAMER OVER");
-
-		} else if (texto == 4) { // texto4
-			System.out.println("RESPOSTA ERRADA !\n");
-
-			System.out.println("NARRADOR:\r\n"
-					+ "ìOs seus inimigos perceberam seus olhares para o sniper no teto de uma casa abandonada e atira em seu peito... VOC  FALHOU!!\n" +
-					"GAMER OVER\"\r\n" + "");
-
-		} else { // texto5
-			System.out.println("RESPOSTA CORRETA !\n");
-
-			System.out.println("NARRADOR:\r\n" + "\r\n" + "ìMUITO BOM!!!!\n"
-					+ "O mafioso vizinho recebeu um tiro do habilidoso sniper que vocÍ contratou e morreu...\n"
-					+ "Alguns dias apÛs sua fuga do local a m·fia comeÁa a perder influÍncia...\n"
-					+ "VocÍ est· cada vez mais perto do seu objetivo, vamos para prÛxima miss„o...î\r\n" + "");
-			Aguarda();
-			System.out.println("\r");
-			limpatela();
-
-			System.out.println("NARRADOR:\r\n"
-					+ "ìVoltando para a casa dos Fibonacci, o senhor Don anseia falar com vocÍ...î\r\n" + "");
-			System.out.println(
-					"DON:\r\n" + "ìVocÍ est· se saindo cada vez melhor (nome do personagem), È desse tipo de Caporegime" // usar
-																															// variavel
-																															// com
-																															// nome
-																															// do
-																															// personagem
-
-							+ "que eu preciso ter ao meu lado!î\r\n" + "");
-			System.out.println("PERSONAGEM:\n" // usar varivel que guarda o nome da pesosnagem.
-					+ "ìFalando nisso senhor, quando eu poderei assumir um cargo como o seu?î\n");
-			System.out.println("DON:\r\n"
-					+ "ìN„o seja t„o ambicioso, vocÍ j· deve saber que o m·ximo que pode subir È atÈ onde est·, mais que isso"
-					+ "eu teria que morrer!î\r\n" + "");
-			System.out.println("PERSONAGEM:\n" // usar varivel que guarda o nome da pesosnagem.
-					+ "ìSim senhor, me desculpe, que bobagem a minha n„o? Posso lhe servir um copo um whiskey?î\n");
-			Aguarda();
-			System.out.println("\r");
-			limpatela();
-
-			System.out.println("NARRADOR: \r\n"
-					+ "ìVocÍ prepara um copo de whiskey com gelo para o Don, como de costume, sÛ que antes de servi-lo coloca o veneno\n"
-					+ "que havia comprado... O chefe est· desconfiado depois dessa conversa que vocÍ teve com ele, resolva o seguinte\n"
-					+ "problema para persuadi-lo a tomar o whiskey...î\r\n" + "");
-		}
-	}
-
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		Scanner entrada = new Scanner(System.in);
 		String resposta;
-		texto = 1;
-		textos();
-		List<String> alternativas = new ArrayList<String>(); // Ao iniciar uma rodada as questıes ser„o apresentadas em
+		//texto = 1;
+		MENS("NARRADOR:\r"
+				+"‚ÄúAp√≥s alguns anos como Caporegime da fam√≠lia Fibonacci,\n"
+				+ "o clima entre os mafiosos da regi√£o acaba esquentando, entre uma intriga e outra\n"
+				+ "surge uma inimizade muito grande entre as fam√≠lias.\n"
+				+ "Sua miss√£o agora √© ajudar o Don Nero a identificar a melhor forma de lidar com essa guerra iminente...\n"
+				+ "Para tentar negociar com as fam√≠lias voc√™ precisa ir at√© o ponto de encontro para uma\n"
+				+ "conversa com o chefe da m√°fia vizinha, encontre no plano cartesiano o √∫nico quadrante\n"
+				+ "em que n√£o tem nenhum ponto marcado, os pontos j√° marcados foram: A (2, 3), B (-1, 2), C (2, -3) e D (1, 0).‚Äú\n)",TimeUnit.MILLISECONDS,temp_quick);
+		
+		List<String> alternativas = new ArrayList<String>(); // Ao iniciar uma rodada as quest√µes ser√£o apresentadas em
 																// uma nova ordem
 		alternativas.add("[A - I]");
 		alternativas.add("[B - II]");
@@ -146,17 +67,50 @@ public class WayToTheTop {
 		case "b":
 		case "D":
 		case "d":
-			texto = 2;// chamada do segundo texto da funÁ„o "textos"
-			textos();
+			//texto = 2;// chamada do segundo texto da fun√ß√£o "textos"
+			MENS("NARRADOR:\r\n"
+					+ "‚ÄúVoc√™ esta atrasado(a) para o encontro e a m√°fia vizinha entende isso como uma afronta e inicou uma guerra... VOC√ä FALHOU!!‚Äú\n" + 
+					"GAMER OVER",TimeUnit.MILLISECONDS,temp_quick);
 			
 			break;
 		case "C": // resposta correta
 		case "c":
 
-			texto = 3; // chamada do terceiro texto da funÁ„o "textos"
-			textos();
+			//texto = 3; // chamada do terceiro texto da fun√ß√£o "textos"
+			MENS("RESPOSTA CORRETA !\n",TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+			
+			
+			MENS("NARRADOR:\r\n"
+					+ "‚ÄúMUITO BOM! Voc√™ chegou at√© o ponto de encontro e discute o assunto com a m√°fia vizinha.‚Äù\r\n\n"
+					+ "",TimeUnit.MILLISECONDS,temp_quick);
+			MENS("MAFIOSO VIZINHO: \r\n" + 
+					"‚ÄúSeus neg√≥cios tem crescido bastante e isso est√° nos afetando, como\n"
+							+ "oferta de negocia√ß√£o para evitar problemas maiores pra voc√™s, pe√ßo que nos\n"
+							+ "d√™ quatorze cassinos estrat√©gicos. O que me diz?\r\n\n" , TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+		
+			MENS("PERSONAGEM:\r\n" // usar varivel que guarda o nome da pesosnagem.
+					+ "‚ÄúQuatorze cassinos??!!!!! Isso seria o fim dos neg√≥cios do senhor Don, como eu estou neste momento representando-o,\n"
+					+ "o que posso oferecer s√£o cinco cassinos, caso n√£o seja do seu agrado, pode iniciar a guerra que tanto\n"
+					+ "deseja e veremos quem realmente sai perdendo!‚Äù\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+		
+			MENS("MAFIOSO VIZINHO:\r\n"
+					+ "‚ÄúEu aceito no m√≠nimo dez, voc√™ acha que eu sou amador garoto? √â isso ou nada feito.‚Äù\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+			Aguardar();
+			limpatela();
+			
+			MENS("NARRADOR: \r\n"
+					+ "‚ÄúO sniper que voc√™ contratou por precau√ß√£o est√° a postos aguardando o sinal...\n"
+					+ "Para dar o sinal selecione as outras duas coordenadas que representam a localiza√ß√£o do sniper,\n"
+					+ "sendo que uma das diagonais do quadrado tem extremidades A (1; 1) e C (3; 3).\n"
+					+ "As coordenadas dos outros dois v√©rtices s√£o:‚Äú\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
 
-			List<String> alternativa = new ArrayList<String>(); // Ao iniciar uma rodada as questıes ser„o apresentadas
+			List<String> alternativa = new ArrayList<String>(); // Ao iniciar uma rodada as quest√µes ser√£o apresentadas
 																// em uma nova ordem
 			alternativa.add("[A - (2; 3) e (3; 2)]");
 			alternativa.add("[B - (3; 1) e (1; 3)]");
@@ -172,17 +126,55 @@ public class WayToTheTop {
 			case "c":
 			case "D":
 			case "d":
-				texto = 4; // chamada do quarto texto da funÁ„o "textos"
-				textos();
+				//texto = 4; // chamada do quarto texto da fun√ß√£o "textos"
+				Aguardar();
+				limpatela();
+				
+				MENS("RESPOSTA ERRADA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("NARRADOR:\r\n"
+					+ "‚ÄúOs seus inimigos perceberam seus olhares para o sniper no teto de uma casa abandonada e atira em seu peito... VOC√ä FALHOU!!\n" +
+					"GAMER OVER\"\r\n", TimeUnit.MILLISECONDS,temp_quick);
 				
 				break;
 
 			case "B": // resposta correta
 			case "b":
-				texto = 5; // chamada do quinto texto da funÁ„o "textos"
-				textos();
+				//texto = 5; // chamada do quinto texto da fun√ß√£o "textos"
+				Aguardar();
+				limpatela();
 				
-				// continuaÁ„o para a parte do Igor!
+				MENS("RESPOSTA CORRETA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("NARRADOR:"
+						+ "‚Äú\nMUITO BOM!!!!\n"
+					+ "O mafioso vizinho recebeu um tiro do habilidoso sniper que voc√™ contratou e morreu...\n"
+					+ "Alguns dias ap√≥s sua fuga do local a m√°fia come√ßa a perder influ√™ncia...\n"
+					+ "Voc√™ est√° cada vez mais perto do seu objetivo, vamos para pr√≥xima miss√£o...‚Äù\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("NARRADOR:\r\n\n"
+					+ "‚ÄúVoltando para a casa dos Fibonacci, o senhor Don anseia falar com voc√™...‚Äù\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("DON:\r\n\n" + "‚ÄúVoc√™ est√° se saindo cada vez melhor (nome do personagem), √© desse tipo de Caporegime" 
+							+ "que eu preciso ter ao meu lado!‚Äù\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("PERSONAGEM:\r\n\n"
+					+ "‚ÄúFalando nisso senhor, quando eu poderei assumir um cargo como o seu?‚Äù\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("DON:\r\n\n"
+					+ "‚ÄúN√£o seja t√£o ambicioso, voc√™ j√° deve saber que o m√°ximo que pode subir √© at√© onde est√°, mais que isso"
+					+ "eu teria que morrer!‚Äù\r\n", TimeUnit.MILLISECONDS,temp_quick);
+				MENS("PERSONAGEM:\r\n\n" 
+					+ "‚ÄúSim senhor, me desculpe, que bobagem a minha n√£o? Posso lhe servir um copo um whiskey?‚Äù\n", TimeUnit.MILLISECONDS,temp_quick);
+				Aguardar();
+				limpatela();
+				
+				MENS("NARRADOR: \r\n\n"
+					+ "‚ÄúVoc√™ prepara um copo de whiskey com gelo para o Don, como de costume, s√≥ que antes de servi-lo coloca o veneno\n"
+					+ "que havia comprado... O chefe est√° desconfiado depois dessa conversa que voc√™ teve com ele, resolva o seguinte\n"
+					+ "problema para persuadi-lo a tomar o whiskey...‚Äù\r\n" , TimeUnit.MILLISECONDS,temp_quick);
+				
+				// continua√ß√£o para a parte do Igor!
 
 			}
 		}
