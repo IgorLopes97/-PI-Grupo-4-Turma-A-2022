@@ -1,9 +1,8 @@
-package jogo;
 	import java.util.Scanner;
 	import java.util.concurrent.TimeUnit;
 
-	public class Main {
-		static int temp_quick= 1, temp_menu = 25, temp_dialogo = 60, reputacao = 0;
+	public class main {
+		static int temp_quick= 10, temp_menu = 25, temp_dialogo = 60, reputacao = 0;
 
 		// ********************** IGOR ***************************************************************
 		public static void main(String[] args) throws Exception {
@@ -25,7 +24,9 @@ package jogo;
 				capitulo3();
 				
 				capitulo4();	
-				gameover(false);
+				gameover(true);
+				// adicionar final "positivo"
+				// limite do mens: 180 caracteres sem quebrar linha
 			}
 			
 		}
@@ -139,7 +140,7 @@ package jogo;
 			do {
 		    MENS("Para iniciar a sua missão, primeiramente, localize o caminho que você deve percorrer para chegar ao Cassino da rua 7, saindo da sua casa localizada na rua 3. \n",TimeUnit.MILLISECONDS,temp_quick);
 		    MENS("Dada a função f(x) = x2 + 10x + 9, encontre o valor da soma das coordenadas do vértice da parábola representada por ela.\n",TimeUnit.MILLISECONDS,temp_quick);
-		    MENS("A) 21 \n",TimeUnit.MILLISECONDS,temp_quick);
+		    MENS("A) 21 \n",TimeUnit.MILLISECONDS,temp_quick); //resposta correta
 		    MENS("B) 26 \n",TimeUnit.MILLISECONDS,temp_quick);
 		    MENS("C) 10 \n",TimeUnit.MILLISECONDS,temp_quick);
 		    MENS("D) 16 \n",TimeUnit.MILLISECONDS,temp_quick);
@@ -158,7 +159,7 @@ package jogo;
 		    	case "C":
 		    	case "D":
 		    	case "E":
-		    		MENS("Você está muito lento, os malandros já fizeram o assalto e sua credibilidade está abaixando gradativamente! \n",TimeUnit.MILLISECONDS,temp_quick);
+		    		MENS("Você está muito lento, os malandros já fizeram o assalto e sua credibilidade está abaixando gradativamente! \n\n",TimeUnit.MILLISECONDS,temp_quick);
 		    		opt = 1;
 		    		// CHECAR 
 		    		rep = -10;
