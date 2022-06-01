@@ -12,10 +12,10 @@ public class missão2 {
 	}
 	
 	static void introdução() throws InterruptedException{
-		MENS("2.Algum tempo se passou e sua vida como associado seguiu plena, até que um dia você foi chamado para cumprir uma missão no principal Cassino da cidade, todos sabem que lá a barra é pesada\n"
-				+ "e que o dono é um informante da polícia, porém, dessa vez ele está querendo falar demais sobre um esquema de burlar as máquinas de caça-níquel dos salões de jogos.",TimeUnit.MILLISECONDS,temp_quick);
-		MENS("\nCom esses dados em mãos, a polícia poderá prender todos os integrantes da família e se a informação vazar para a mídia, os investidores que ganham uma grande quantia de dinheiro com esses jogos\n"
-				+ " ficariam muito irritados e uma guerra poderia se iniciar em sua cidade.",TimeUnit.MILLISECONDS,temp_quick);
+		MENS("2.Algum tempo se passou e sua vida como associado seguiu plena, até que um dia você foi chamado para cumprir uma missão no principal Cassino da cidade, todos sabem que lá a barra é\n"
+				+ "pesada e que o dono é um informante da polícia, porém, dessa vez ele está querendo falar demais sobre um esquema de burlar as máquinas de caça-níquel dos salões de jogos.",TimeUnit.MILLISECONDS,temp_quick);
+		MENS("\nCom esses dados em mãos, a polícia poderá prender todos os integrantes da família e se a informação vazar para a mídia, os investidores que ganham \n"
+				+ "uma grande quantia de dinheiro com esses jogos ficariam muito irritados e uma guerra poderia se iniciar em sua cidade.",TimeUnit.MILLISECONDS,temp_quick);
 	}
 	
 	static boolean desafio1() throws InterruptedException {
@@ -59,7 +59,8 @@ public class missão2 {
 		int i=0;
 		Scanner entrada = new Scanner(System.in);
 		do {
-			MENS("\nChegando no local, você repara que o clima está tenso, há uma energia pesada no ar, parece até que todos ali sabem o que você irá fazer, um dos seguranças do local te para e pergunta:",TimeUnit.MILLISECONDS,temp_quick);		
+			MENS("\nChegando no local, você repara que o clima está tenso, há uma energia pesada no ar, parece até que todos ali sabem o que você irá fazer, um dos seguranças do local"
+					+ "te para e pergunta:",TimeUnit.MILLISECONDS,temp_quick);		
 			MENS("\nSegurança:",TimeUnit.MILLISECONDS,temp_quick);
 			MENS("\n- Você que é o [nome_personagem]?",TimeUnit.MILLISECONDS,temp_quick);
 			MENS("\n[a] Sim, sou eu mesmo!",TimeUnit.MILLISECONDS,temp_quick);
@@ -82,8 +83,8 @@ public class missão2 {
 	static boolean desafio3() throws InterruptedException {
 		boolean f=false;
 		Scanner entrada = new Scanner(System.in);
-		MENS("\n O segurança te leva diretamente a sala dos fundos do Cassino, ao abrir a porta, você se depara com uma sala escura, com poucas cadeiras e em uma delas está o delator que você estava procurando,\n"
-				+ " agora é hora da ação!",TimeUnit.MILLISECONDS,temp_quick);
+		MENS("\n O segurança te leva diretamente a sala dos fundos do Cassino, ao abrir a porta, você se depara com uma sala escura, com poucas cadeiras e em uma delas está o\n"
+				+ "delator que você estava procurando, agora é hora da ação!",TimeUnit.MILLISECONDS,temp_quick);
 		MENS("\n Selecione uma das opções:",TimeUnit.MILLISECONDS,temp_quick);
 		MENS("\n [a] posicione-se a frente do delator e execute a tarefa suja a qual foi encarregado!",TimeUnit.MILLISECONDS,temp_quick);
 		MENS("\n[b] Amarele de última hora, saia do local e volte para sua casa.",TimeUnit.MILLISECONDS,temp_quick);
@@ -108,27 +109,12 @@ public class missão2 {
 		}
 	}
 	
-	public static void aguarde() throws InterruptedException { 
-		Scanner s = new Scanner(System.in);		
-		for (int i = 0; i < 1; i++) {
-			MENS("\nPrecione ENTER para continuar: ",TimeUnit.MILLISECONDS,temp_quick);			
-			s.nextLine();
-		}
-	}
-	
-	public static void limpatela() {
-		System.out.println(
-				"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-	}
-	
 	public static void main(String[]args) throws InterruptedException{
 		introdução();
-		aguarde();
 		boolean d1=desafio1();
 		nara1(d1);
 		gameover(d1);
-		boolean d2=desafio2();
-		aguarde();
+		desafio2();
 		boolean d3=desafio3();
 		gameover(d3);
 		
