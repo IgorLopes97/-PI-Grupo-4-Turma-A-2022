@@ -187,7 +187,7 @@ public class main {
 			MENS("Nunca saberemos, mas agora você deve lidar com essa situação do melhor jeito possível, o que você faz?”\n\n",TimeUnit.MILLISECONDS,temp_quick);
 			
 			MENS("A) Nada, afinal, ninguém chamou aquela velha intrometida naquele lugar, ela deveria saber que algo assim não se faz e passar por essa situação é bom para ela aprender uma lição!\n",TimeUnit.MILLISECONDS,temp_quick);
-		    MENS("B) Você corre para o esconderijo e encontra sua vó prestes a entrar... \r\n"
+		    MENS("B) Você corre para o esconderijo e encontra sua vó prestes a entrar..."
 		    		+ " “Vó Nonna, você não deveria estar aqui hoje, nós estamos passando por uma.... uma... uma dedetização, por isso hoje não é um dia bom para visitas seria horrível você continuar aqui, vamos para casa! Me dê só um minuto! “\r\n"
 		    		+ "\n",TimeUnit.MILLISECONDS,temp_quick);
 		    decisao = entrada.next();
@@ -288,12 +288,10 @@ public class main {
 // ************************ FELIPE ***********************************************************
 	public static void capitulo2() throws InterruptedException {
 		introducao_cap2();
-		//aguarde();
 		boolean d1=desafio1();
 		nara1(d1);
 		gameover(d1);
 		boolean d2=desafio2();
-		//aguarde();
 		boolean d3=desafio3();
 		gameover(d3);
 	}
@@ -470,8 +468,6 @@ public class main {
 		Scanner entrada = new Scanner(System.in);
 		String resposta;
 		boolean falha = false;
-		// KATIA TU VAI TER Q ARROMBAR ESSA BOMBA
-		//texto = 1;
 		MENS("NARRADOR:\r"
 				+"Após alguns anos como Caporegime da família Fibonacci, o clima entre os mafiosos da região acaba esquentando"
 				+ ", entre uma intriga e outra surge uma inimizade muito grande entre as famílias. \n"
@@ -510,7 +506,6 @@ public class main {
 
 			//texto = 3; // chamada do terceiro texto da fun��o "textos"
 			MENS("RESPOSTA CORRETA !\n",TimeUnit.MILLISECONDS,temp_quick);
-			//Aguardar();
 			limpatela();
 			
 			
@@ -521,18 +516,15 @@ public class main {
 					"Seus negócios tem crescido bastante e isso está nos afetando, como oferta de negociação para evitar problemas maiores pra vocês,"
 					+ " peço que você me dê quatorze cassinos estratégicos.\n"
 					+ "O que me diz?" , TimeUnit.MILLISECONDS,temp_quick);
-			//Aguardar();
 			limpatela();
 		
 			MENS("PERSONAGEM:\r\n" // usar varivel que guarda o nome da pesosnagem.
 					+ "Quatorze cassinos seriam o fim dos negócios do senhor Don, como eu estou neste momento representando-o, o que posso oferecer são cinco cassinos,\n"
 					+ " caso não seja do seu agrado, pode iniciar a guerra que tanto deseja e veremos quem realmente sai perdendo!”", TimeUnit.MILLISECONDS,temp_quick);
-			//Aguardar();
 			limpatela();
 		
 			MENS("MAFIOSO VIZINHO:\r\n"
 					+ "“Eu aceito no mínimo dez, você acha que eu sou amador garoto? É isso ou nada feito.” ", TimeUnit.MILLISECONDS,temp_quick);
-			//Aguardar();
 			limpatela();
 			
 			MENS("NARRADOR: \r\n"
@@ -557,8 +549,6 @@ public class main {
 			case "c":
 			case "D":
 			case "d":
-				//texto = 4; // chamada do quarto texto da fun��o "textos"
-				//Aguardar();
 				limpatela();
 				
 				MENS("RESPOSTA ERRADA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
@@ -571,7 +561,6 @@ public class main {
 			case "B": // resposta correta
 			case "b":
 				System.out.println("\n");
-				//Aguardar();
 				limpatela();
 				
 				MENS("RESPOSTA CORRETA !\r\n\n", TimeUnit.MILLISECONDS,temp_quick);
@@ -580,7 +569,6 @@ public class main {
 					+ " mafioso vizinho recebe um tiro do habilidoso sniper que você contratou e morre e alguns dias após sua fuga do local"
 					+ " a máfia começa a perder influência... "
 					+ "Você está cada vez mais perto do seu objetivo, vamos para a próxima missão. \n", TimeUnit.MILLISECONDS,temp_quick);
-				//Aguardar();
 				limpatela();
 				
 				MENS("NARRADOR:\r\n"
@@ -589,7 +577,6 @@ public class main {
 						+ " é desse tipo de Caporegime que eu preciso ter ao meu lado!\n" , TimeUnit.MILLISECONDS,temp_quick);
 				MENS("PERSONAGEM:\r\n\n"
 					+"Falando nisso senhor, quando eu poderei assumir um cargo como o seu?\n", TimeUnit.MILLISECONDS,temp_quick);
-				//Aguardar();
 				limpatela();
 				
 				MENS("DON:\r\n\n"
