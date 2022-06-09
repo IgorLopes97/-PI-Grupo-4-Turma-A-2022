@@ -5,12 +5,14 @@ import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class main {
-	static int temp_quick= 1, temp_menu = 25, temp_dialogo = 60, reputacao = 0;
+	static int temp_quick= 20;
 
 	// ********************** IGOR ***************************************************************
 	public static void main(String[] args) throws Exception {
 		int ret_intro = 0;
 		
+		// Função "main" apenas para chamada dos capitulos, controle do jogo feito todo dentro das funções.
+		// chamada introdução do jogo e menu até que a opção "Jogar" seja selecionada
 		ret_intro = intro();
 		
 		if(ret_intro == 2) {
@@ -31,6 +33,7 @@ public class main {
 		
 	}
 	
+	// Função para exibição dos textos do RPG
 	public static void MENS(String mensagem, TimeUnit unit, long tempo_mensagem) throws InterruptedException {
         for (char caractere : mensagem.toCharArray()) {
         System.out.print(caractere);
@@ -38,6 +41,7 @@ public class main {
         }
 	}
 	
+	// Função de menu, é executada em Loop até o jogador selecionar "Jogar" ou "Sair"
 	public static int menu() throws Exception {
 		Scanner entrada = new Scanner(System.in);
 		
@@ -143,6 +147,7 @@ public class main {
 		MENS("\n",TimeUnit.MILLISECONDS,temp_quick);		 
 	 }	
 	
+	// Primeiro capitulo do jogo, envolve as decisões iniciais, a ideia é permitir erros nas primeiras missões
 	public static void capitulo1() throws InterruptedException {
 		Scanner entrada = new Scanner(System.in);
 		
@@ -159,6 +164,7 @@ public class main {
 	    MENS("E) 20 \n",TimeUnit.MILLISECONDS,temp_quick);
 	    alt = entrada.next();
 	    
+	    // Utilização de switch/case para proteção de alternativa
 	    switch(alt.toUpperCase()){
 	    	case "A":
 	    		MENS("Parabéns, você localizou o melhor trajeto para chegar ao cassino da rua 7 e chegou a tempo para dar uma boa lição nos malandros e mostrar quem é quem manda. \n",TimeUnit.MILLISECONDS,temp_quick);
@@ -187,15 +193,22 @@ public class main {
 		String decisao = "", decisao1="";
 		int opt = 0, opt1=0;
 		
+		List<String> opc = new ArrayList<String>();
+		String exibir = "";
+
 		do {
 			MENS("Uma surpresa aconteceu, de última hora, sua avó decidiu te visitar no trabalho, como ela descobriu onde você estava?\n",TimeUnit.MILLISECONDS,temp_quick);
 			MENS("Nunca saberemos, mas agora você deve lidar com essa situação do melhor jeito possível, o que você faz?”\n\n",TimeUnit.MILLISECONDS,temp_quick);
 			
-			MENS("A) Nada, afinal, ninguém chamou aquela velha intrometida naquele lugar, ela deveria saber que algo assim não se faz e passar por essa situação é bom para ela aprender uma lição!\n",TimeUnit.MILLISECONDS,temp_quick);
-		    MENS("B) Você corre para o esconderijo e encontra sua vó prestes a entrar..."
-		    		+ " “Vó Nonna, você não deveria estar aqui hoje, nós estamos passando por uma.... uma... uma dedetização,\n"
-		    		+ "por isso hoje não é um dia bom para visitas seria horrível você continuar aqui, vamos para casa! Me dê só um minuto! “"
-		    		+ "\n",TimeUnit.MILLISECONDS,temp_quick);
+			opc.add("A) Nada, afinal, ninguém chamou aquela velha intrometida naquele lugar,\n ela deveria saber que algo assim não se faz e passar por essa situação é bom para ela aprender uma lição!");
+			opc.add("B) Você corre para o esconderijo e encontra sua vó prestes a entrar...\r\n"
+					+ "“Vó Nonna, você não deveria estar aqui hoje, nós estamos passando por uma.... uma... uma dedetização,\n"
+					+ "por isso hoje não é um dia bom para visitas seria horrível você continuar aqui, vamos para casa! Me dê só um minuto!“");
+			
+			// Utilização de aleatoriedade devido a primeira chance de gameover, requer atenção do usuário na opção selecionada
+			Collections.shuffle(opc);
+			exibir = String.join("\n", opc);
+		    MENS(exibir,TimeUnit.MILLISECONDS,temp_quick);
 		    decisao = entrada.next();
 	    
 		    switch(decisao.toUpperCase()){
@@ -217,11 +230,17 @@ public class main {
 		    		do {
 			    		MENS("Seu sucesso chamou a atenção dos mafiosos do bairro e eles te fizeram um convite para ingressar na família, seu primeiro cargo será de: ASSOCIADO. \n",TimeUnit.MILLISECONDS,temp_quick);
 			    		MENS("O que você responde? \n",TimeUnit.MILLISECONDS,temp_quick);
-			    		MENS("A) Claro que eu aceito essa oportunidade, muito obrigada por essa honra! \n",TimeUnit.MILLISECONDS,temp_quick);
-			    		MENS("B) *Com a voz tremendo* Não, não, muito obrigado, mas eu terei que recursar! É que... é que o meu trabalho aqui como coordenador desses cassinos já me faz muito feliz! rs! \n",TimeUnit.MILLISECONDS,temp_quick);
+			    		
+			    		String [] opcoes = new String[2];
+			    		
+			    		opcoes[0] = "A) Claro que eu aceito essa oportunidade, muito obrigada por essa honra! \n";
+			    		opcoes[1] = "B) *Com a voz tremendo* Não, não, muito obrigado, mas eu terei que recursar! É que... é que o meu trabalho aqui como coordenador desses cassinos já me faz muito feliz! rs! \n";
+			    		
+			    		for(int i = 0;i<opcoes.length;i++) {
+			    			MENS(opcoes[i],TimeUnit.MILLISECONDS,temp_quick);
+			    		}
 			    		decisao1 = entrada.next();
-		    		
-		    		 
+			    		
 		    			    switch(decisao1.toUpperCase()){
 		    			    	case "A":
 		    			    		MENS("Claro que eu aceito essa oportunidade, muito obrigada por essa honra! \n\n",TimeUnit.MILLISECONDS,temp_quick);
@@ -283,8 +302,6 @@ public class main {
 	    	case "C":
 	    	case "E":
 	    		MENS("Acho que você não é tão bom assim...\n\n",TimeUnit.MILLISECONDS,temp_quick);
-	    		// CHECAR
-	    		reputacao = reputacao - 10;
 	    		opt = 1;
 	    		break;
 	    	default:
@@ -296,6 +313,7 @@ public class main {
 	}
 
 // ************************ FELIPE ***********************************************************
+	// Função central para controle de capitulo como um todo, dividindo funções de enunciado e de escolhas (com retorno)
 	public static void capitulo2() throws InterruptedException {
 		introducao_cap2();
 		boolean d1=desafio1();
@@ -420,6 +438,8 @@ public class main {
 		String alternativa2;
 		boolean falha=false;
 		do {
+			// Nesse desafio o usuário terá três chances devido a complexidade da questão.
+			
 			MENS("Considerando que as raízes de uma função do segundo grau são x e y,"
 					+ "selecione a alternativa correta:\n", TimeUnit.MILLISECONDS, temp_quick);
 			MENS("[A] A coordenada y do vértice pode ser obtida somando as raízes.\n"
@@ -577,7 +597,6 @@ public class main {
 
 	}
 //******************************** IGOR *****************************************************
-	
 	public static void capitulo4() throws Exception {
 		Scanner ent = new Scanner(System.in);
 		int cont = 0;
@@ -594,7 +613,7 @@ public class main {
 	    MENS("E) 12 \n",TimeUnit.MILLISECONDS,temp_quick);
 
 	    alternativa = ent.next();
-	    
+	    	// Utilizando proteção para garantir que o jogador vai preencher uma das alternativas desejadas
 		    switch(alternativa.toUpperCase()){
 		    	case "B":
 		    		MENS("Don aceita o copo enveneado e morre, agora com a influência e os aliados que você tem pode governar os negócios como quiser! \n\n",TimeUnit.MILLISECONDS,temp_quick);
